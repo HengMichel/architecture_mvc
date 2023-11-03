@@ -20,15 +20,15 @@ URL: index.php?controller=user&method=update&id=32
 // $controller = $_GET["controller"] ?? "home";
 // tout cela veux dire la meme chose
 
-var_dump($_GET);
+// var_dump($_GET);
 
 $controller = $_GET["controller"] ?? "home";
 $method    = $_GET["method"] ?? "liste";
 $id         = $_GET["id"] ?? null;
 
-$classeController = "Controllers\\" . ucfirst($controller) . "Controller";  // ucfirst: met la première lettre d'un string en majuscule
-/* $classeController = "Controllers\UserController" 
-   $methode = "liste"
+$classeController = "Controller\\" . ucfirst($controller) . "Controller";  // ucfirst: met la première lettre d'un string en majuscule
+/* $classeController = "Controller\UserController" 
+   $method = "liste"
 */
 // echo $controller . "<br>";
 // echo $method . "<br>";
@@ -39,4 +39,4 @@ $classeController = "Controllers\\" . ucfirst($controller) . "Controller";  // u
 */
 $controller = new $classeController;
 // $UserController->update($id);
-$controller->$methode($id);
+$controller->$method($id);

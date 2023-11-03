@@ -14,7 +14,7 @@ RewriteRule ^$                             index.php [L]
 # ^ : Signifie que la chaîne doit commencer par.
 # (\w+) : Capture une ou plusieurs lettres, chiffres ou caractères de soulignement (c'est-à-dire une partie de l'URL).
 RewriteRule ^(\w+)/?$                       index.php?controller=$1 [L,QSA]
-# index.php?controller=$1  = une requete http d'une methode GET dans une Url
+# index.php?controller=$1  = une requete http d'une method GET dans une Url
 
 # / : Correspond à un caractère de barre oblique (slash) dans l'URL.
 RewriteRule ^(\w+)/(\w+)$                   index.php?controller=$1&method=$2 [L,QSA]
