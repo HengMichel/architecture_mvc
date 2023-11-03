@@ -1,5 +1,5 @@
 <?php
-function addLink($controller, $method = "liste", $id = null)
+function addLink($controller, $method = "list", $id = null)
 {
     // return ROOT . "?controller=$controller&method=$method" . ($id ? "&id=$id" : "");
     return ROOT . "$controller/$method" . ($id ? "/$id" : "");

@@ -20,4 +20,4 @@
             <div class="row">
                 <?php include "public/nav.html.php"; ?>
 
-                <h1><?= $h1 ?? "Bienvenue au projet" ?></h1>
+                <h1 class="titre link-danger"><?= $h1 ?? "Bienvenue au projet" ?></h1>

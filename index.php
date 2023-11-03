@@ -21,15 +21,21 @@ URL: index.php?controller=user&method=update&id=32
 // tout cela veux dire la meme chose
 
 // var_dump($_GET);
-
+// on recupere les valeur du tableau $_GET[""] sinon (??) la valeur "  "
 $controller = $_GET["controller"] ?? "home";
-$method    = $_GET["method"] ?? "liste";
+$method    = $_GET["method"] ?? "list";
 $id         = $_GET["id"] ?? null;
-
-$classeController = "Controller\\" . ucfirst($controller) . "Controller";  // ucfirst: met la première lettre d'un string en majuscule
+debug($controller);
+debug($method);
+debug($id );
+// ucfirst: met la première lettre d'un string en majuscule
+$classeController = "Controller\\" . ucfirst($controller) . "Controller";  
 /* $classeController = "Controller\UserController" 
-   $method = "liste"
+   $method = "list"
 */
+debug(ucfirst($controller));
+debug($classeController);
+
 // echo $controller . "<br>";
 // echo $method . "<br>";
 // echo $id . "<br>";

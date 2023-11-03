@@ -6,7 +6,7 @@ use Controller\BaseController;
 
 class HomeController extends BaseController
 {
-    public function liste()
+    public function list()
     {
         $this->render("home.html.php");
     }
